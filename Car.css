@@ -1,30 +1,77 @@
-import React from 'react';
-import './App.css';
-
-function App() {
-  return (
-    <div className="hero-section">
-      <nav className="navbar">
-        <div className="logo">CARZONE</div>
-        <ul className="nav-links">
-          <li>HOME</li>
-          <li>SERVICE</li>
-          <li>FEATURED CARS</li>
-          <li>NEW CARS</li>
-          <li>CONTACT</li>
-        </ul>
-      </nav>
-
-      <div className="content">
-        <h1>
-          GET YOUR <span className="highlight-orange">DREAM CAR</span> AT A{' '}
-          <span className="highlight-pink">DREAM PRICE</span>
-        </h1>
-        <p>The largest inventory of cars in Northern India</p>
-        <button className="contact-btn">CONTACT US</button>
-      </div>
-    </div>
-  );
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-export default App;
+.hero-section {
+  background-image: url('https://imgd.aeplcdn.com/664x374/n/cw/ec/176129/m4-competition-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80'); /* make sure this matches your file */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.highlight-orange {
+  color: #f9a825;
+}
+
+.highlight-pink {
+  color: #e91e63;
+}
+
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.contact-btn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e65b50;
+}
